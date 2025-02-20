@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Vegist Store</title>
+    <style>
+        .slider-container {
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .slider-wrapper {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+            position: relative;
+        }
+        .nav-links {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        .nav-links.active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar  starts here -->
+    <nav class="bg-white shadow-md w-full">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-6 flex items-center justify-between py-4 sm:py-4">
+            <div class="text-2xl font-bold text-gray-900 flex items-center">
+                <img src="./assets/logo-8.svg" alt="Logo" class="h-8 mr-2"> 
+            </div>
+            <div class="flex space-x-4 items-center md:order-2">
+                <a href="#" class="text-gray-700 hover:text-yellow-700"><i class="fas fa-search"></i></a>
+                <a href="#" class="text-gray-700 hover:text-yellow-700"><i class="fas fa-user"></i></a>
+                <a href="#" class="text-gray-700 hover:text-yellow-700"><i class="far fa-heart"></i></a>
+                <a href="#" class="text-gray-700 hover:text-yellow-700"><i class="fas fa-shopping-bag"></i></a>
+                <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-yellow-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul id="menu" class="hidden md:flex space-x-6 text-gray-700 font-medium md:relative absolute bg-white w-full md:w-auto left-0 md:left-auto top-full md:top-auto md:flex-row flex-col md:shadow-none shadow-lg">
+                <li><a href="#" class="hover:text-yellow-700 block py-2 px-4 md:p-0 sm:py-0 px-0">HOME</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block py-2 px-4 md:p-0 sm:py-0 px-0">SHOP</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block py-2 px-4 md:p-0 sm:py-0 px-0">COLLECTION</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block py-2 px-4 md:p-0 sm:py-0 px-0">PAGES</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block py-2 px-4 md:p-0 sm:py-0 px-0">BLOGS</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block py-2 px-4 md:p-0 sm:py-0 px-0">BUY VEGIST</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar ends here --> 
+    
+    <!-- Hero Section starts here -->
+    <section class="slider-container relative w-full h-full bg-gray-100">
+        <div class="">
+         <div class=" slider-wrapper w-full h-full">
+            <!-- Slide 1 -->
+            <div class="slide relative">
+                <img src="./assets/slider21_9cb99305-d626-4305-ad42-679d229b90e0.webp" class="w-full h-full object-cover" alt="Organic fruits">
+                <div class="absolute inset-0 flex items-center justify-start px-6 sm:px-12 md:px-24 lg:px-58 left-4">
+                    <div class=" bg-opacity-50 lg:p-4 md:p-10 rounded-lg ">
+                        <p class="text-yellow-700 text-sm md:text-lg font-semibold lg:py-4">Fresh Vegetables!</p>
+                        <h1 class="text-3xl sm:text-xl md:text-5xl font-bold ">Organic Food</h1>
+                        <h2 class="text-xl md:text-3xl font-light mt-2 lg:py-4">Perfect for Any Time</h2>
+                        <button class="mt-4 px-6 py-2 border-2 border-yellow-700 text-yellow-700 text-sm md:text-lg font-semibold rounded hover:bg-yellow-700 hover:text-white transition-all duration-300">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide relative">
+                <img src="./assets/slider23.webp" class="w-full h-full object-cover" alt="Healthy snacks">
+                <div class="absolute inset-0 flex items-center justify-start px-6 sm:px-12 md:px-24 lg:px-58 left-4 ">
+                    <div class=" bg-opacity-50 lg:p-4 md:p-10 rounded">
+                        <p class="text-yellow-700 text-sm md:text-lg font-semibold lg:py-4">Fresh Fruits!</p>
+                        <h1 class="text-3xl sm:text-xl md:text-5xl font-bold ">Tasty & Nutritious</h1>
+                        <h2 class="text-xl md:text-3xl font-light mt-2 lg:py-4">Perfect for Any Time</h2>
+                        <button class="btn-1 mt-4 px-6 py-2 border-2 border-yellow-700 text-yellow-700 text-sm md:text-lg font-semibold rounded hover:bg-yellow-700 hover:text-white transition-all duration-300">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+       
+            <!-- Slide 3 -->
+           
+
+        <div class="slide relative">
+            <img src="./assets/silder-22.webp" class="w-full h-full object-cover" alt="Organic fruits">
+            <div class="absolute inset-0 flex items-center justify-start px-6 sm:px-12 md:px-24 lg:px-58 left-4">
+                <div class=" bg-opacity-50 lg:p-4 md:p-10 rounded-lg">
+                    <p class="text-yellow-700 text-sm md:text-lg font-semibold lg:py-4">Top Sailing!</p>
+                    <h1 class="text-3xl sm:text-xl md:text-5xl font-bold sm:left-50  ">Fresh & Juicy</h1>
+                    <h2 class="text-xl md:text-3xl text-sm font-light mt-2 lg:py-4">Delicious & Healthy</h2>
+                    <button class="mt-4 px-6 py-2 border-2 border-yellow-700 text-yellow-700 text-sm md:text-lg font-semibold rounded hover:bg-yellow-700 hover:text-white transition-all duration-300">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button id="prev" title="Previous Slide" class="absolute left-1 md:left-8 top-1/2 transform -translate-y-1/2 bg-transparent text-yellow-700 p-3 rounded z-10 sm:bg-yellow-700 sm:text-white hover:bg-yellow-700 hover:text-white transition-all duration-200 p-2">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <button id="next" title="Next Slide" class="absolute right-2 md:right-8 top-1/2 transform -translate-y-1/2 bg-transparent text-yellow-700 p-3 rounded z-10 sm:bg-yellow-700 sm:text-white hover:bg-yellow-700 hover:text-white transition-all duration-300 p-2">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Nav Links in Hero Section -->
+        <div id="nav-links" class="nav-links absolute top-0 left-0 w-full h-screen bg-white bg-opacity-75 p-2 md:p-6 text-sm-center flex justify-center">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-gray-800 md:text-gray-700 font-medium">
+                <li><a href="#" class="hover:text-yellow-700 text-sm-center block px-4 md:p-0">HOME</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block md:py-1 px-4 md:p-0 sm:py-0 px-0 text-sm">SHOP</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block md:py-1 px-4 md:p-0 sm:py-0 px-0">COLLECTION</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block md:py-1 px-4 md:p-0 sm:py-0 px-0">PAGES</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block md:py-1 px-4 md:p-0 sm:py-0 px-0">BLOGS</a></li>
+                <li><a href="#" class="hover:text-yellow-700 block md:py-1 px-4 md:p-0 sm:py-0 px-0">BUY VEGIST</a></li>
+            </ul>
+        </div>
+        
+    </section>
+<!-- Hero Section ends here -->  
+
+
+
+  <!-- Categories Section starts here -->
+<section class="category py-10 sm:py-12">
+    <div class="max-w-7xl mx-auto  px-4 ">
+      
+        <div class="grid  text-center md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 px-10">
+            <div class="border rounded-lg bg-gray-100 w-full h-50 flex flex-col items-center">
+                <img src="/assets/cat15.webp" alt="Fresh Meat" class="mx-auto">
+                <p class="mt-2 text-sm text-gray-900">22 items</p>
+                <button class="mt-5 font-semibold bg-white w-full py-3 w-100 border hover:bg-yellow-700 hover:text-white transition-all duration-300 ease-in-out">FRESH MEAT</button>
+            </div>
+            <div class=" border rounded-lg bg-gray-100 w-full flex flex-col items-center">
+                <img src="/assets/cat16.webp" alt="Organic Juice" class="mx-auto">
+                <p class="mt-2 text-sm text-gray-900">22 items</p>
+                <button class="mt-5 font-semibold bg-white w-full py-3 w-100 border hover:bg-yellow-700 hover:text-white transition-all duration-300 ease-in-out">ORGANIC JUICE</button>
+            </div>
+            <div class="border rounded-lg bg-gray-100 w-full flex flex-col items-center">
+                <img src="/assets/cat13.webp" alt="Fresh Vegetable" class="mx-auto">
+                <p class="mt-2 text-sm text-gray-900">22 items</p>
+                <button class="mt-5 font-semibold bg-white w-full py-3 w-100 border hover:bg-yellow-700 hover:text-white transition-all duration-300 ease-in-out ">FRESH VEGETABLE</button>
+            </div>
+            <div class="border rounded-lg bg-gray-100 w-full flex flex-col items-center">
+                <img src="/assets/cat14.webp" alt="Fresh Fruits" class="mx-auto">
+                <p class="mt-2 text-sm text-gray-900">22 items</p>
+                <button class="mt-5 font-semibold bg-white w-full py-3 w-100 border hover:bg-yellow-700 hover:text-white transition-all duration-300 ease-in-out">
+                    FRESH FRUITS
+                  </button>
+                  
+            </div>
+        </div>
+      
+</section>
+  <!-- Categories Section ends-->
+
+
+
+ <!-- Exquisite Service Section -->
+ <section class="exquisite-service py-10 px-24 sm:py-12">
+    <div class="mt-12 text-center p-10">
+        <h2 class="text-3xl font-bold pointer-event text-gray-700 ">Exquisite service</h2>
+        <div class="flex flex-col md:flex-row items-center justify-between mt-8 gap-8">
+            <div class="flex items-center gap-4">
+                <div class=" py-3 px-4 border rounded-full transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-yellow-700 hover:text-white"><i class="fa-solid fa-thumbs-up"></i></div>
+                <div>
+                    <h3 class="font-semibold">Quality support</h3>
+                    <p class="text-sm text-gray-600">Always online 24/7</p>
+                </div>
+            </div>
+            
+
+            <div class="flex items-center gap-4">
+                <div class="py-3 px-4 border rounded-full transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-yellow-700 hover:text-white"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                    <h3 class="font-semibold">Join newsletter</h3>
+                    <p class="text-sm text-gray-600">20% off by subscribing</p>
+                </div>
+            </div>       
+
+        </div>
+        <div class="mt-8">
+            <img src="./assets/service-middle-banner.webp" alt="Basket of groceries" class="mx-auto">
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between mt-8 gap-8">
+          
+
+            <div class="flex items-center gap-4">
+                <div class="py-3 px-4 border rounded-full transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-yellow-700 hover:text-white"><i class="fa-solid fa-truck"></i></div>
+                <div>
+                    <h3 class="font-semibold">Free delivery</h3>
+                    <p class="text-sm text-gray-600">Orders from all items</p>
+                </div>
+            </div>
+
+
+            <div class="flex items-center gap-4">
+                <div class="py-3 px-4 border rounded-full transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-yellow-700 hover:text-white"><i class="fa-solid fa-rotate-left"></i></div>
+                <div>
+                    <h3 class="font-semibold">Return & refund</h3>
+                    <p class="text-sm text-gray-600">Money back guarantee</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ </section>       
+    <!-- Exquisite service ends here -->
+
+
+
+ <!-- Product Card starts here-->
+<section class="py-12 discover-product ">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-center text-2xl font-semibold mb-6">Discover product</h2>
+        
+        <div class="flex justify-center space-x-4 text-sm text-gray-600 mb-10">
+            <span class="text-yellow-700 font-semibold border-b-2 border-yellow-700 pb-1">ORGANIC DRYFRUIT</span>
+            <span>|</span>
+            <span class="cursor-pointer transition-all duration-300 hover:text-yellow-700 font-semibold hover:border-b-2 border-yellow-700 transition-all">FRESH MEAT</span>
+            <span>|</span>
+            <span class="cursor-pointer transition-all duration-300 hover:text-yellow-700 font-semibold hover:border-b-2 border-yellow-700 transition-all">GREEN SEAFOOD</span>
+        </div>
+
+        <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 p-10">
+
+
+
+            <!-- Product Card -->
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/11_63bd7f85-bfa5-4d43-b09f-d5b24e398ef6.webp" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                  
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-lg font-semibold">Fresh blueberry</h3>
+                <p class="text-lg font-bold text-gray-700">€35,00 <span class="text-gray-400 line-through">€51,00</span></p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+
+
+
+            
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/34.webp" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                    <!-- Icons at the bottom center of the image -->
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-lg font-semibold">Fresh seafoods</h3>
+                <p class="text-lg font-bold text-gray-700">€18,00 <span class="text-gray-400 line-through">€44,00</span></p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/2_f0faa15f-6149-4dd4-bf1e-a8c3d19a4cf4.webp" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                    <!-- Icons at the bottom center of the image -->
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-lg font-semibold">Organic coconet</h3>
+                <p class="text-lg font-bold text-gray-700">€35,00 <span class="text-gray-400 line-through">€44,00</span></p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/43.webp" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                    <!-- Icons at the bottom center of the image -->
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-lg font-semibold">Fresh dryed almod (50g)</h3>
+                <p class="text-lg font-bold text-gray-700">€31,00 </p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+
+      
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/16.jpg" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                   
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-lg font-semibold">Fresh organic reachter</h3>
+                <p class="text-lg font-bold text-gray-700">€44,00 <span class="text-gray-400 line-through">€65,00</span></p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/./49.jpg" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                    
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-lg font-semibold">Orange juice natural</h3>
+                <p class="text-lg font-bold text-gray-700">€66,00</p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/45.jpg" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                    
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-2">
+                    <h3 class="text-lg font-semibold">Fresh mussel (500g)</h3>
+                <p class="text-lg font-bold text-gray-700">€33,00 <span class="text-gray-400 line-through">€55,00</span></p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white  rounded-lg shadow-md relative group">
+               
+                <div class="relative">
+                    <img src="./assets/35.webp" alt="Product Image" class="w-full h-60 object-cover mb-4 p-0">
+                  
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-1 ">59%</span>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition ">
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="bg-gray-200 py-2 px-3 rounded hover:bg-yellow-700 hover:text-white transition-all duration-400 ease-in-out transform">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-4 py-3">
+                    <h3 class="text-lg font-semibold">Shrimp - jumbo (5 lb)</h3>
+                <p class="text-lg font-bold text-gray-700">€61,00</p>
+                <div class="flex text-yellow-400 text-sm mt-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-gray-500 ml-2">No reviews</span>
+                </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>    
+
+ <!-- Product Card ends here-->
+
+
+
+<!-- img-video section starts here -->
+ <section class="grid grid-cols-1 md:grid-cols-12 items-center justify-center p-8  p-sm-1 gap-8 max-w-7xl mx-auto min-h-screen">
+    <!-- Left Side-->
+    <div class="col-span-12 md:col-span-6 flex flex-row bg-gray-100  rounded min-h-[70vh] "> 
+        <div class="flex flex-col justify-center w-1/3 p-4 ">
+            <p class="text-yellow-600 font-semibold">FRESH ORGANIC!</p>
+            <h2 class="text-3xl font-bold text-gray-900 mt-2">HEALTHY FOODS</h2>
+            <button class="mt-4 px-2 py-2 border-2 border-yellow-700 md:px-3 text-yellow-700 text-sm font-semibold rounded hover:bg-yellow-700 hover:text-white transition-all duration-300">Shop now</button>
+        </div>
+        <div class="flex justify-end w-2/3 ">
+            <img src="./assets/4e05adf4a9567d2a43390f1b5bce0f55.png" alt="Healthy Foods" class="rounded-lg w-2xl h-auto ">
+        </div>
+    </div>
+
+    <!-- Countdown Timer  -->
+    <div class="sm:h-[40vh] col-span-12 md:col-span-1 flex flex-col items-center justify-center text-gray-900 text-lg font-semibold text-center rounded-lg min-h-[40vh] p-sm-01 ">
+        <p><span class="text-2xl font-bold mb-sm-2">3631</span><br> <span class="text-gray-600 mb-sm-2"> DAY</span> <br> <span class="mb-sm-2">. .</span></p>
+        <p><span class="text-2xl font-bold mb-sm-2">4</span> <br><span class="text-gray-600">HRS</span> <br> <span>. .</span></p>
+        <p><span class="text-2xl font-bold mb-sm-2">51</span><br> <span class="text-gray- mb-sm-2">MIN</span>  <br><span>. .</span></p>
+        <p class="text-yellow-700 mb-sm-2"><span class="text-2xl font-bold text-yellow-700 mb-sm-2">18</span> <br><span class="text-gray-600">SEC</span></p>
+    </div>
+<!-- Right Side - -->
+<div class="col-span-12 md:col-span-5 flex flex-col items-center h-[70vh]">
+    <div class=" w-full h-full  rounded-lg flex items-center justify-center overflow-hidden">
+        <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/0etCKCAsImI" frameborder="0" allowfullscreen title="YouTube video player"></iframe>
+    </div>
+</div>
+</section>
+<!-- img-video section ends here -->
+
+
+
+
+
+<!-- Customer Reviews section starts here -->
+<section class="py-4 px-12 customer-reviews ">
+    <div class="w-full  sm:px-12 "> 
+ 
+         <h2 class="text-2xl font-bold text-center mb-8">Customer reviews</h2>
+         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+
+             <!-- Card Template -->
+             <div class=" bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+                 <div class="flex items-center mb-3">
+                     <span class="text-yellow-400 text-lg">★★★★★</span>
+                 </div>
+                 <h3 class="font-bold mb-2">For customer support</h3>
+                 <p class="text-gray-700 mb-4">The theme is very clean. I want to say that the support is extremely responsive and has been very patient with me. thank you so much for your help!</p>
+                 <div class="flex items-center text-gray-600 font-semibold">
+                     <span class="text-4xl text-yellow-700 mr-2"><i class="fas fa-quote-left"></i></span> 
+                     <span>By tokenfaith</span>
+                 </div>
+             </div>
+          
+             <div class="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+                 <div class="flex items-center mb-3">
+                     <span class="text-yellow-400 text-lg">★★★★★</span>
+                 </div>
+                 <h3 class="font-bold mb-2">For customer support</h3>
+                 <p class="text-gray-700 mb-4">We needed a number of adjustments and changes before sending the site from draft/staging to a live site. support was quick to make the necessary adjustments and changes.</p>
+                 <div class="flex items-center text-gray-600 font-semibold">
+                     <span class="text-4xl text-yellow-700 mr-2"><i class="fas fa-quote-left"></i></span> 
+                     <span>By refine_digital</span>
+                 </div>
+             </div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+                 <div class="flex items-center mb-3">
+                     <span class="text-yellow-400 text-lg">★★★★★</span>
+                 </div>
+                 <h3 class="font-bold mb-2">For other</h3>
+                 <p class="text-gray-700 mb-4">The developer is awesome at jumping on and fixing things or making changes for me. The design is great and can be adjusted easily. I will definitely stick to them when comes time for an upgrade.</p>
+                 <div class="flex items-center text-gray-600 font-semibold">
+                     <span class="text-4xl text-yellow-700 mr-2"><i class="fas fa-quote-left"></i></span> 
+                     <span>By stickersicka</span>
+                 </div>
+             </div>
+
+             <!--  Cards -->
+             <div class="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+                 <div class="flex items-center mb-3">
+                     <span class="text-yellow-400 text-lg">★★★★★</span>
+                 </div>
+                 <h3 class="font-bold mb-2">For customer support</h3>
+                 <p class="text-gray-700 mb-4">Excellent customer support! I highly recommend this. I have been having many troubles making the product page look exactly as I want. the customer support was very responsive and efficient in solving my problems. thank you very much!</p>
+                 <div class="flex items-center text-gray-600 font-semibold">
+                     <span class="text-4xl text-yellow-700 mr-2"><i class="fas fa-quote-left"></i></span> 
+                     <span>By ciln1</span>
+                 </div>
+             </div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+                 <div class="flex items-center mb-3">
+                     <span class="text-yellow-400 text-lg">★★★★★</span>
+                 </div>
+                 <h3 class="font-bold mb-2">Flexibility</h3>
+                 <p class="text-gray-700 mb-4">I love this theme. highly customizable, easy to use and very flexible theme. great support! excellent response times. very professional and helpful in all queries, absolutely awesome. highly recommended: the theme is really amazing.</p>
+                 <div class="flex items-center text-gray-600 font-semibold">
+                     <span class="text-4xl text-yellow-700 mr-2"><i class="fas fa-quote-left"></i></span> 
+                     <span>By disarak</span>
+                 </div>
+             </div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+                 <div class="flex items-center mb-3">
+                     <span class="text-yellow-400 text-lg">★★★★★</span>
+                 </div>
+                 <h3 class="font-bold mb-2">Customer support</h3>
+                 <p class="text-gray-700 mb-4">The design is really good and site is very responsive, however, what compelled me to write this review is the customer support that I have got. prompt support from the developer. would recommend it highly.</p>
+                 <div class="flex items-center text-gray-600 font-semibold">
+                     <span class="text-4xl text-yellow-700 mr-2 d-block"><i class="fas fa-quote-left"></i></span> 
+                     <span>By cremico_foods</span>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ <!-- Customer Reviews section ends here -->
+
+
+
+ 
+
+
+ <!-- Recent news section starts here --> 
+<section class="news py-12 px-12 md:px-16 lg:px-24">
+    <h2 class="text-2xl md:text-3xl font-semibold text-center mb-8">Recent news</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+            <img src="./assets/blog-5_fef03722-1123-48e9-ba68-663832524ab0.jpg" alt="" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="font-semibold text-lg">Fresh organics brand and picnic</h3>
+                <p class="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. ...</p>
+                <a href="#" class="text-black font-medium flex items-center mt-4 hover:text-yellow-700 transition-all duration-300 ease-in-out ">Read more <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+            <img src="./assets/88bd5f729c3ef3d93e9bc5b2295d14c0.jpg" alt="" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="font-semibold text-lg">Health and skin for your organic</h3>
+                <p class="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. ...</p>
+                <a href="#" class="text-black font-medium flex items-center mt-4 hover:text-yellow-700 transition-all duration-300 ease-in-out">Read more <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg hover:border hover:border-gray-300 transition-all duration-300 ease-in-out">
+            <img src="./assets/organic-vegetable-variety-on-display.jpg" alt="" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="font-semibold text-lg">All time fresh every time healthy</h3>
+                <p class="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. ...</p>
+                <a href="#" class="text-black font-medium flex items-center mt-4 hover:text-yellow-700 transition-all duration-300 ease-in-out">Read more <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Logos Section -->
+    <div class="flex flex-wrap justify-center items-center mt-12 gap-12 text-gray-500 text-4xl px-10 sm:text-left"> 
+        
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-leaf"></i>
+            <span class="text-xl">Organic</span>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-store"></i>
+            <span class="text-xl">Mini Market</span>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-cart-plus"></i>
+            <span class="text-xl">Spacingtech</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="text-xl">Grocery Spacingtech</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="text-xl">Grocery Spacingtech</span>
+        </div>
+    </div>
+</section>
+ <!-- Recent news section ends here --> 
+
+
+
+<!-- Footer Section starts here -->
+<footer class="bg-gray-100 py-10 px-5 md:px-20 sm:text-center sm:mx-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 text-gray-700 sm:mx-auto text-center">
+        <!-- Logo & Description -->
+        <div class="flex flex-col items-center sm:items-start">
+            <div class="flex items-center justify-center sm:justify-start space-x-2">
+                <img src="./assets/logo-8.svg" alt="Vegist Logo" class="h-10">
+            </div>
+            <p class="mt-2 text-sm">Tortor neque egestas augue, eu vulputate magna eros eu erat.</p>
+            <div class="flex space-x-3 mt-4 text-yellow-600 justify-center sm:justify-start">
+                <i class="fab fa-facebook text-2xl"></i>
+                <i class="fab fa-twitter text-2xl"></i>
+                <i class="fab fa-instagram text-2xl"></i>
+                <i class="fab fa-pinterest text-2xl"></i>
+                <i class="fab fa-youtube text-2xl"></i>
+            </div>
+        </div>
+        
+        <!-- Services -->
+        <div>
+            <h3 class="font-semibold text-lg">SERVICES</h3>
+            <ul class="mt-2 space-y-2 text-sm">
+                <li>About vegist</li>
+                <li>Faq's</li>
+                <li>Contact us</li>
+                <li>News</li>
+                <li>Store location</li>
+            </ul>
+        </div>
+
+        <!-- Privacy & Terms -->
+        <div>
+            <h3 class="font-semibold text-lg">PRIVACY & TERMS</h3>
+            <ul class="mt-2 space-y-2 text-sm">
+                <li>Payment policy</li>
+                <li>Privacy policy</li>
+                <li>Return policy</li>
+                <li>Shipping policy</li>
+                <li>Terms & conditions</li>
+            </ul>
+        </div>
+        
+        <!-- My Account -->
+        <div>
+            <h3 class="font-semibold text-lg">MY ACCOUNT</h3>
+            <ul class="mt-2 space-y-2 text-sm">
+                <li>My account</li>
+                <li>My cart</li>
+                <li>Order history</li>
+                <li>My wishlist</li>
+                <li>My address</li>
+            </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="flex flex-col items-center sm:items-start">
+            <h3 class="font-semibold text-lg">CONTACT VEGIST</h3>
+            <p>Wooster parck chowk bazzar, New York</p>
+            <p class="mt-1"><i class="fas fa-phone-alt"></i> +014-33333-8888-6868</p>
+            <p class="mt-1"><i class="fas fa-envelope"></i> support@spacingtech.com</p>
+            <!-- Payment Methods -->
+            <div class="flex space-x-3 justify-center sm:justify-start mt-8">
+                <img src="./assets/Visa-Symbol.png" alt="Visa" class="h-7">
+                <img src="./assets/2-2-paypal-logo-transparent-png.png" alt="PayPal" class="h-7">
+                <img src="./assets/mastercard-logo-mastercard-logo-png-vector-download-19.png" alt="Mastercard" class="h-7">
+                <img src="./assets/1_9CabsvM0WPsxSU9saZxgXA.png" alt="Google Pay" class="h-7">
+                <img src="./assets/American_Express-Logo.wine.png" alt="Amex" class="h-7">
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-700 text-sm lg:right-0">
+      
+    </div>
+
+    <p class="text-center text-gray-500 text-sm mt-10">Copyright © 2025 by spacingtech</p>
+</footer>
+  <!-- Footer Section ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let index = 0;
+            const slides = document.querySelectorAll(".slide");
+            const sliderWrapper = document.querySelector(".slider-wrapper");
+            const totalSlides = slides.length;
+        
+            function updateSlide() {
+                sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+            }
+        
+            document.getElementById("next").addEventListener("click", function () {
+                index = (index + 1) % totalSlides;
+                updateSlide();
+            });
+        
+            document.getElementById("prev").addEventListener("click", function () {
+                index = (index - 1 + totalSlides) % totalSlides;
+                updateSlide();
+            });
+        
+            // Mobile menu toggle
+            document.getElementById("menu-toggle").addEventListener("click", function () {
+                const navLinks = document.getElementById("nav-links");
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
